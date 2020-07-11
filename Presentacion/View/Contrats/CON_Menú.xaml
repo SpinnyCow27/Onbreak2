@@ -1,0 +1,75 @@
+﻿<Controls:MetroWindow x:Class="Presentacion.View.Contrats.CON_Menú"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentacion.View.Contrats"
+        mc:Ignorable="d"
+        xmlns:i="schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Menu Contrato" Height="502" Width="900" WindowStartupLocation="CenterScreen"
+        MinHeight="502" MinWidth="900" MaxHeight="502" MaxWidth="900">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="537*"/>
+            <ColumnDefinition Width="288*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--#region SuperiorMenú -->
+        <StackPanel Margin="0,41,0,410" Grid.ColumnSpan="3">
+            <Separator Background="#FF238CBD"></Separator>
+        </StackPanel>
+        <StackPanel Margin="0,441,0,10" Grid.ColumnSpan="3">
+            <Separator Background="#FF238CBD"/>
+        </StackPanel>
+        <StackPanel Margin="53,203,493,198" Grid.ColumnSpan="2">
+            <Controls:Tile Background="Black" Height="65" Margin="0,3" Width="Auto" Click="btnVolver">
+                <Image Height="65" Source="/Images/Volver.png" Stretch="Fill" Width="69"/>
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Margin="34,259,458.156,177">
+            <Controls:Tile Background="Black" Height="30" Margin="3,3,0,3" Width="Auto" Click="btnVolver2">
+                <Label Content="Menú" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="15"></Label>
+            </Controls:Tile>
+        </StackPanel>
+        <!--#endregion-->
+
+        <Controls:Tile Margin="95,52,245,251" Title="Buscar" Foreground="Black" HorizontalTitleAlignment="Center" FontWeight="Bold" Grid.Column="1" Height="Auto" Width="Auto" Background="#CC467616" Click="btnBuscar">
+            <Controls:Tile.Effect>
+                <DropShadowEffect Color="#FF2C2828" BlurRadius="8" ShadowDepth="10"/>
+            </Controls:Tile.Effect>
+            <Image Height="128" Source="/Images/Search.png" Stretch="Fill" Width="128"/>
+        </Controls:Tile>
+
+
+        <Controls:Tile Margin="404,52,215,251" Title="Registrar" Foreground="Black" HorizontalTitleAlignment="Center" FontWeight="Bold" Grid.Column="1" Height="Auto" Width="Auto" Grid.ColumnSpan="2" Background="#CCFBFBFB" Click="btnRegistrar">
+            <Controls:Tile.Effect>
+                <DropShadowEffect Color="#FF2C2828" BlurRadius="8" ShadowDepth="10"/>
+            </Controls:Tile.Effect>
+            <Image Height="128" Source="/Images/Registro.png" Stretch="Fill" Width="128"/>
+        </Controls:Tile>
+
+
+        <Controls:Tile Margin="250,259,90.156,44" Title="Eliminar" Foreground="Black" HorizontalTitleAlignment="Center" FontWeight="Bold" Grid.Column="1" Height="Auto" Width="Auto" Background="#CC7417A9" Click="btnEliminar">
+            <Controls:Tile.Effect>
+                <DropShadowEffect Color="#FF2C2828" BlurRadius="8" ShadowDepth="10"/>
+            </Controls:Tile.Effect>
+            <Image Height="128" Source="/Images/Eliminar.png" Stretch="Fill" Width="128"/>
+        </Controls:Tile>
+
+        <StackPanel Margin="154.844,203,57.156,202" Grid.Column="2">
+            <Controls:Tile Background="Black" Height="59" Margin="3,3,0,3" Width="Auto" Click="btnLista1">
+                <Image Height="59" Source="/Images/Contracts2.png" Stretch="Fill" Width="64"/>
+            </Controls:Tile>
+        </StackPanel>
+
+        <StackPanel Margin="131,259,28,182" Grid.Column="2">
+            <Controls:Tile Background="Black" Height="23" Margin="3,3,0,3" Width="Auto" Click="btnLista2">
+                <Label Foreground="White" FontWeight="Bold" FontSize="12" Content="Lista Contratos"></Label>
+            </Controls:Tile>
+        </StackPanel>
+
+    </Grid>
+</Controls:MetroWindow>

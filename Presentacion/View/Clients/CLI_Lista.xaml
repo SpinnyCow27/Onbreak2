@@ -1,0 +1,73 @@
+﻿<Controls:MetroWindow x:Class="Presentacion.View.Clients.CLI_Lista"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentacion.View.Clients"
+        mc:Ignorable="d"
+        xmlns:i="schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Lista de Clientes" Height="502" Width="900" WindowStartupLocation="CenterScreen"
+        MinHeight="502" MinWidth="900" MaxHeight="502" MaxWidth="900">
+    <Grid Background="Black">
+        <!--SECCIÓN DEL LAYOUT-->
+        <StackPanel Margin="5,10,827,407">
+            <Controls:Tile  Background="Black" Click="Volver1" Height="51" Margin="4,3,0,3" Width="Auto">
+                <Image Height="51" Source="/Images/Volver.png" Stretch="Fill" Width="53"/>
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="65,22,761,416">
+            <Controls:Tile Height="30" Margin="3,3,0,3" Width="Auto" Background="Black" Click="Volver2">
+                <Label Height="35" Foreground="White" FontSize="16" FontFamily="Century" FontWeight="Bold" Content="Volver"/>
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="577,10,254,416">
+            <Controls:Tile Height="51" Margin="3,3,0,3" Width="Auto" Background="Black" Click="AdminClien1">
+                <Image Height="51" Source="/Images/Admin2.png" Stretch="Fill" Width="48"/>
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="638,22,33,416">
+            <Controls:Tile Background="Black" Height="30" Margin="0,3" Width="Auto" Click="AdminClien2">
+                <Label Foreground="White" FontFamily="Century" FontSize="16" Content="Administrar Clientes" Height="28" Width="177"/>
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="0,59,0,407">
+            <Separator Background="#FF238CBD" ></Separator>
+            <Separator Background="#FF238CBD"></Separator>
+        </StackPanel>
+        <StackPanel Margin="0,437,0,0">
+            <Separator Background="Black"></Separator>
+            <Separator Background="#FF238CBD"></Separator>
+            <Separator Background="#FF238CBD"></Separator>
+        </StackPanel>
+        <!--SECCIÓN DEL LAYOUT-->
+        <Label FontSize="18" Foreground="White" FontWeight="Bold" Content="Listado de Clientes" Margin="377,21,347,419"></Label>
+        <Label FontSize="14" Foreground="White" FontWeight="Bold" Content="Buscar el Cliente: " Margin="18,76,746,370"></Label>
+        <TextBox x:Name="txtRut" FontSize="14"  Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese el RUT" Margin="146,75,494,370"></TextBox>
+        <Button Margin="415,69,347,367" Content="Buscar Cliente" Background="#FF238CBD" BorderThickness="1" Foreground="Wheat" FontWeight="Medium" Click="btnBuscar"/>
+
+
+
+
+        <!--#region Tabla -->
+        <DataGrid x:Name="ListaClientesdatagrid" HorizontalAlignment="Left" Height="332" Margin="14,107,0,0" VerticalAlignment="Top" Width="864" RenderTransformOrigin="0.5,0.5" >
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.483"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="1.35"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre contacto" Binding="{ Binding Path=NombreContacto }" />
+                <DataGridTextColumn Header="Rut del cliente" Binding="{ Binding Path=RutCliente }" />
+                <DataGridTextColumn Header="Mail del contacto" Binding="{ Binding Path=MailContacto }" />
+                <DataGridTextColumn Header="Actividad empresa" Binding="{ Binding Path=ActividadEmpresa.Descripcion }" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <!--#endregion-->
+
+    </Grid>
+</Controls:MetroWindow>

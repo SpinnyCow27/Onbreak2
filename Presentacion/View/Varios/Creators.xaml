@@ -1,0 +1,48 @@
+﻿<Controls:MetroWindow x:Class="Presentacion.View.Varios.Creators"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentacion.View.Varios"
+        mc:Ignorable="d"
+        xmlns:i="schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Creadores" Height="502" Width="900" WindowStartupLocation="CenterScreen"
+        MinHeight="502" MinWidth="900" MaxHeight="502" MaxWidth="900">
+    <Grid Background="Black">
+        <!--SECCIÓN DEL LAYOUT-->
+        <StackPanel Margin="5,10,827,407">
+            <Controls:Tile  Background="Black" Click="Volver1" Height="51" Margin="4,3,0,3" Width="Auto">
+                <Image Height="51" Source="/Images/Volver.png" Stretch="Fill" Width="53"/>
+
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="65,22,761,416">
+            <Controls:Tile Height="30" Margin="3,3,0,3" Width="Auto" Background="Black" Click="Volver2">
+                <Label Height="35" Foreground="White" FontSize="16" FontFamily="Century" FontWeight="Bold" Content="Volver"/>
+            </Controls:Tile>
+        </StackPanel>
+
+        <StackPanel Margin="0,69,0,397">
+            <Separator Background="#FF238CBD" ></Separator>
+            <Separator Background="#FF238CBD"></Separator>
+        </StackPanel>
+        <StackPanel Margin="0,437,0,0">
+            <Separator Background="Black"></Separator>
+            <Separator Background="#FF238CBD"></Separator>
+        </StackPanel>
+        <!--SECCIÓN DEL LAYOUT-->
+
+        <Image Margin="787,5,35,402" Source="/Images/celeste.png" Stretch="Fill"/>
+        <Label FontSize="36" Foreground="White" FontWeight="Bold" Margin="294,88,403,326">PROYECTO</Label>
+        <Image Margin="502,74,286,307" Source="/Images/onbreak.jpg" Stretch="Fill"/>
+        <Label FontSize="28" Foreground="White" FontWeight="Medium"  Margin="334,150,372,274" FontFamily="Yu Gothic UI">Realizado Por</Label>
+        <Label FontSize="28" Foreground="White" Margin="65,196,625,228" Content="Diego Salvador" FontFamily="Palatino Linotype"/>
+        <Label FontSize="28" Foreground="White" Margin="232,248,458,176" Content="Felipe Vilches" FontFamily="Palatino Linotype"/>
+        <Label FontSize="28" Foreground="White" Margin="384,295,306,129" Content="Diana Martínez" FontFamily="Palatino Linotype"/>
+        <Label FontSize="28" Foreground="White" Margin="551,347,128,77" Content="Matías Gallardo" FontFamily="Palatino Linotype"/>
+        <Image Margin="10,362,482,34" Source="/Images/Logo Duoc UC Escuela IT.jpg" Stretch="Fill"/>
+
+    </Grid>
+</Controls:MetroWindow>

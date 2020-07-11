@@ -1,0 +1,58 @@
+﻿<Controls:MetroWindow x:Class="Presentacion.View.Contrats.CON_Buscar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentacion.View.Contrats"
+        mc:Ignorable="d"
+        xmlns:i="schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Administración de Contratos" Height="502" Width="900" WindowStartupLocation="CenterScreen"
+        MinHeight="502" MinWidth="900" MaxHeight="502" MaxWidth="900">
+    <Grid Background="Black">
+        <!--SECCIÓN DEL LAYOUT-->
+        <StackPanel Margin="5,10,827,407">
+            <Controls:Tile  Background="Black" Click="Volver1" Height="51" Margin="4,3,0,3" Width="Auto">
+                <Image Height="51" Source="/Images/Volver.png" Stretch="Fill" Width="53"/>
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="65,22,761,416">
+            <Controls:Tile Height="30" Margin="3,3,0,3" Width="Auto" Background="Black" Click="Volver2">
+                <Label Height="35" Foreground="White" FontSize="16" FontFamily="Century" FontWeight="Bold" Content="Volver"/>
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="577,10,254,416">
+            <Controls:Tile Height="51" Margin="3,3,0,3" Width="Auto" Background="Black" Click="ListaClick1">
+                <Image Height="51" Source="/Images/Contracts2.png" Stretch="Fill" Width="48"/>
+
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="638,22,115,416">
+            <Controls:Tile Background="Black" Height="30" Margin="3,3,0,3" Width="Auto" Click="ListaClick2">
+                <Label Foreground="White" FontFamily="Century" FontSize="16" Content="Lista de Contratos" Height="28"/>
+            </Controls:Tile>
+        </StackPanel>
+        <StackPanel Margin="0,463,0,-26">
+            <Separator Background="#FF238CBD"></Separator>
+        </StackPanel>
+        <!--SECCIÓN DEL LAYOUT-->
+        <!--#region ImagenSeparada -->
+        <Image Source="/Images/celeste.png" Margin="443,10,351,397"/>
+        <!--#endregion-->
+        <!--#region Ingreso -->
+        <Label Foreground="White" Margin="174,22,434,403" HorizontalContentAlignment="Center" FontFamily="Cambria" FontSize="24" Content="Búsqueda de Contrato" FontWeight="Bold"/>
+        <Label Foreground="White" Margin="0,64,776,382" Content="Número Contrato" FontWeight="Medium" FontSize="12" HorizontalAlignment="Right"/>
+        <TextBox x:Name="txtNumeroContrato" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Número Contrato" Margin="10,89,687,355" FontSize="12"/>
+        <Label Foreground="White" Margin="0,66,558,382" FontSize="12" Content="Rut Cliente" FontWeight="Medium" HorizontalAlignment="Right"/>
+        <TextBox x:Name="txtRutCliente" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Rut Cliente" Margin="264,89,430,355" FontSize="12"></TextBox>
+        <Label Foreground="White" Margin="0,66,254,382" FontSize="12" Content="Tipo de Evento" FontWeight="Medium" HorizontalAlignment="Right"/>
+        <ComboBox x:Name="cmbTipoEvento" Controls:TextBoxHelper.Watermark="Seleccione el Tipo del Evento" Margin="546,89,148,355" FontSize="12"/>
+
+        <DataGrid x:Name="dtgListaClientes" HorizontalAlignment="Left" Height="273" Margin="10,143,0,0" VerticalAlignment="Top" Width="872" SelectionChanged="dtgListaClientes_SelectionChanged" />
+        <Button Margin="752,86,10,356" Content="Buscar" Background="#FF238CBD" BorderThickness="1" BorderBrush="Wheat" Foreground="White" FontWeight="Medium" Click="BotonBuscar"></Button>
+        <Button Margin="65,421,697,21" Content="Crear Contrato" Background="#FF238CBD" Foreground="Wheat" BorderThickness="1" BorderBrush="Wheat" FontWeight="Medium" Click="BotonCrear"></Button>
+        <!--#endregion-->
+        <Button Margin="709,421,41,21" Content="No se Encuentra" Background="#FF238CBD" Foreground="White" FontWeight="Bold" Click="BuscarSecundario"/>
+    </Grid>
+</Controls:MetroWindow>
